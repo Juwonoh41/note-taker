@@ -1,6 +1,6 @@
 //imports
 const api = require('express').Router()
-const notes = require('../Develop/public/assets/js/index')
+const notes = require('../public/assets/js/index')
 
 //returns the notes file as json
 api.get('/notes', (req,res)=>{
