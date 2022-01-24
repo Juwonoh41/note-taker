@@ -21,3 +21,12 @@ api.delete('/notes/:id', (req,res)=>{
     })
 })
 
+//post
+api.post('notes', (req,res) => {
+    notes.saveNote(req.body)
+    .then((note)=>{
+        res.json(note)
+    }).catch((err)=>{
+        res.status(500).json(`The error is ${err}`)
+    })
+})
